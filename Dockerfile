@@ -1,4 +1,4 @@
-# GGCOM - Docker - OpenZWave v201509111734
+# GGCOM - Docker - OpenZWave v201509141444
 # Louis T. Getterman IV (@LTGIV)
 # www.GotGetLLC.com | www.opensour.cc/ggcom/docker/openzwave
 #
@@ -107,11 +107,17 @@ RUN			pip install execnet
 #---------------------------------------/Supporting Modules: Communications
 
 #--------------------------------------- Supporting Modules: Calculations
-# PyEphem astronomical computations (e.g. sunrise and sunset)
-RUN			pip install pyephem
-
 # Date calculations utility
 RUN			pip install python-dateutil
+
+# Geocoding toolbox
+RUN			pip install geopy
+
+# Astronomical computations (e.g. sunrise and sunset)
+RUN			pip install pyephem
+
+# tzinfo object for the local timezone
+RUN			pip install tzlocal
 #---------------------------------------/Supporting Modules: Calculations
 
 #--------------------------------------- Supporting Modules: Utilities
